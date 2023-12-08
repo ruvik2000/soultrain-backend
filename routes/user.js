@@ -8,7 +8,7 @@ router.get("/allUsers", getUsers);
 router.post("/addUser", addUser);
 router.get("/getByUsername/:username", getUserByUsername);
 router.delete("/deleteByUsername/:username", deleteUserByUsername);
-router.get("/getByArtistName/:artistName", getUserByArtistName);
-router.delete("/deleteByArtistName/:artistName", deleteUserByArtistName);
+router.get("/getByArtistName/:artistname", getUserByArtistName);
+router.delete("/deleteByArtistName/:artistname", deleteUserByArtistName);
 
 export default router;
