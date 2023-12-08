@@ -6,9 +6,9 @@ const router = express.Router();
 // initialze API routes 
 router.get("/allUsers", getUsers);
 router.post("/addUser", addUser);
-router.get("/:username", getUserByUsername);
-router.delete("/:username", deleteUserByUsername);
-router.get("/:artistName", getUserByArtistName);
-router.delete("/:artistName", deleteUserByArtistName);
+router.get("/getByUsername/:username", getUserByUsername);
+router.delete("/deleteByUsername/:username", deleteUserByUsername);
+router.get("/getByArtistName/:artistName", getUserByArtistName);
+router.delete("/deleteByArtistName/:artistName", deleteUserByArtistName);
 
 export default router;

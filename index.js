@@ -13,6 +13,7 @@ app.use(cors())
 
 app.use('/user', userRoutes)
 
+// default route
 app.get('/', (req, res) => {
     res.send('<h1>Wellcome to soultrain API</h1> <p>Start by accessing /user/allUsers API</p>');
 });
