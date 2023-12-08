@@ -56,7 +56,7 @@ export const deleteUserByUsername = async (req, res) => {
 
 export const getUserByArtistName = async (req, res) => {
     try {
-        const user = await User.find({"artistName" : req.params.artistName})
+        const user = await User.find({"artistName" : req.params.artistname})
         if (user.length === 0) {
             // If no user found with the given artistName
             return res.status(404).json({ message: 'User not found with that artistname' });
@@ -69,7 +69,7 @@ export const getUserByArtistName = async (req, res) => {
 
 export const deleteUserByArtistName = async (req, res) => {
     try {
-        const deletedUser = await User.deleteOne({ artistName: req.params.artistName });
+        const deletedUser = await User.deleteOne({ artistName: req.params.artistname });
         if(deletedUser.deletedCount === 1){
             res.status(200).json({message: 'User was deleted successfully'})
         }else{
